@@ -10,10 +10,10 @@ const port= process.env.PORT || 5000
 app.use(express.json());
 
 connectToMongo();
-app.use("/",(req,res)=>{
+// app.use("/",(req,res)=>{
   
-  res.json("chal bya backengd")
-});
+//   res.json("chal bya backengd")
+// });
 
 app.use("/api",require("./routes/route"));
 app.use("/api",require("./routes/user"));

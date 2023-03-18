@@ -8,6 +8,8 @@ const bcrypt = require('bcrypt');
 
 var jwt = require('jsonwebtoken');
 var jwt_screte="thisismy secrete"
+
+
 router.post('/user/signup',
 body('email','not a email').isEmail(),
 // password must be at least 5 chars long
