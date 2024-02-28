@@ -9,14 +9,16 @@ const vertical_db = require("../db/vertical")
 const course_db = require("../db/courses")
 const user_Schema = require("../db/userschema")
 
-
+const attandence_schema = require('../db/attandence')
 
 const fetch_person = require('./middelware/fun')
-router.get('/inside',fetch_person,async(req,res)=>{
-    const user = await user_Schema.findById({_id:req.mongoid})
-    // console.log(user);
-    const data = await vertical_db.find({})
-    res.status(200).json({data,user});
+router.get('/inside',async(req,res)=>{
+    // const user = await user_Schema.findById({_id:req.mongoid})
+    // // console.log(user);
+    // const data = await vertical_db.find({})
+    // res.status(200).json({data,user});
+    const da = await attandence_schema.find({});
+    res.json({data : da});
 })
 
 //  `${server}/vertical/${verticalId}/course

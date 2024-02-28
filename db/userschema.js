@@ -10,9 +10,10 @@ const database1 = mongoose.Schema({
   },
   email:{
     type:String
-  }
+  },
+
   
 });
-const userregis = mongoose.model("user", database1);
+const userregis = mongoose.model("old_user", database1);
 
 module.exports = userregis;

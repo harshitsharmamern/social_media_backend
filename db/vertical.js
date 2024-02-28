@@ -4,7 +4,6 @@ const database1 = mongoose.Schema({
    name: {
     type: String,
   },
-  
    description :{
     type:String
   },
@@ -12,8 +11,6 @@ const database1 = mongoose.Schema({
     type:Array,
     default:[]
   }
-  
 });
 const userregis = mongoose.model("vertical", database1);
-
 module.exports = userregis;
